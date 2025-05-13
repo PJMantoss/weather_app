@@ -9,3 +9,9 @@ body {
     background-color: #343434;
     color: white;
 }
+
+.container {
+    width: 26%;
+}
+
+.card {}
