@@ -16,5 +16,8 @@ body {
 
 .card {
     border-radius: 3.13rem;
-    box-shadow: 0.31rem 0.31rem 0.63rem #191b1b, -0.31rem -0.31rem -0.63rem #595959;
+    background-color: #343434;
+    box-shadow: 0.31rem 0.31rem 0.63rem #191b1b, -0.31rem -0.31rem 0.63rem #595959;
+    padding: 3%;
+    text-align: center;
 }
