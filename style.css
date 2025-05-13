@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+    background-color: #343434;
+    color: white;
+}
