@@ -39,7 +39,12 @@ body {
 button.refresh{
     display: block;
     width: 6.25rem;
+    height: 6.25rem;
     background: transparent;
+    color: #9c9c9d;
     margin: 0.63rem auto;
     border: 0;
+    font-size: 1.88rem;
+    border-radius: 50%;
+    box-shadow: 0.63rem 0.25rem 0.63rem #252525, 0.31rem 0.31rem 0.31rem #4a4a4a;
 }
