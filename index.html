@@ -38,7 +38,10 @@
         request.onload = function(){
             var obj = JSON.parse(this.response);
             console.log(obj)
-            document.getElementById().innerHTML = obj;
+
+            document.getElementById("weather").innerHTML = obj.weather[0].description;
+            document.getElementById("location").innerHTML = obj.name;
+            document.getElementById().innerHTML = obj.main.temp - 273.15;
         }
 
         if(request.status >= 200 && request.status < 400){
