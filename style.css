@@ -35,3 +35,8 @@ body {
 #weather {
     text-transform: capitalize;
 }
+
+button.refresh{
+    display: block;
+    width: 6.25rem;
+}
