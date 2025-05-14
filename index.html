@@ -32,7 +32,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
-        // An array of Cities
+        // Array of Cities
         const cities = ['Delhi', 'London', 'Paris', 'Tokyo', 'New York', 'Sydney', 'Cape Town', 'Abuja'];
 
         function getRandomCity() {
@@ -40,29 +40,28 @@
                 return cities[randomIndex];
             }
 
+        // Generate a different city name on each reload
+        const city = getRandomCity();
+
         var request = new XMLHttpRequest();
 
-        function getWeatherData(city){
-            const apiKey = '0fadf96d2336ead026424b46f3be5560';
-            link=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-            request.open('GET', link, true);
-        }
+        const apiKey = '0fadf96d2336ead026424b46f3be5560';
+        link=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+        request.open('GET', link, true);
 
         request.onload = function(){
-            // var obj = JSON.parse(this.response);
-            var data = getWeatherData(city);
-            var dataObj = JSON.parse(data);
-            
-            console.log(obj)
+            var dataObj = JSON.parse(this.response);
 
-            document.getElementById("weather").innerHTML = obj.weather[0].description;
-            document.getElementById("location").innerHTML = obj.name;
-            document.getElementById("temp").innerHTML = Math.round(obj.main.temp - 273.15);
-            document.getElementById("icon").src = "https://openweathermap.org/img/w/" + obj.weather[0].icon + ".png";
+            console.log(dataObj)
+
+            document.getElementById("weather").innerHTML = dataObj.weather[0].description;
+            document.getElementById("location").innerHTML = dataObj.name;
+            document.getElementById("temp").innerHTML = Math.round(dataObj.main.temp - 273.15);
+            document.getElementById("icon").src = "https://openweathermap.org/img/w/" + dataObj.weather[0].icon + ".png";
         }
 
         if(request.status >= 200 && request.status < 400){
-            var temp = obj.main;
+            var temp = dataObj.main;
         }else {
             console.log("The city data is unavailable");
         }
