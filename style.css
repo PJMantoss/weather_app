@@ -66,8 +66,14 @@ button.refresh:hover {
 }
 
 /* Responsiveness */
-@media only screen and (max-width: 799px){
+@media only screen and (max-width: 800px){
     .container {
         width: 80%;
+    }
+}
+
+@media only screen and (max-width: 499px){
+    .container {
+        width: 95%;
     }
 }
