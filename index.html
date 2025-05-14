@@ -40,15 +40,19 @@
                 return cities[randomIndex];
             }
 
+        var request = new XMLHttpRequest();
+
         function getWeatherData(city){
             const apiKey = '0fadf96d2336ead026424b46f3be5560';
-            link=`https://api.openweathermap.org/data/2.5/weather?q=${abuja}&appid=${apiKey}`;
-            var request = new XMLHttpRequest();
+            link=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
             request.open('GET', link, true);
         }
 
         request.onload = function(){
-            var obj = JSON.parse(this.response);
+            // var obj = JSON.parse(this.response);
+            var data = getWeatherData(city);
+            var dataObj = JSON.parse(data);
+            
             console.log(obj)
 
             document.getElementById("weather").innerHTML = obj.weather[0].description;
