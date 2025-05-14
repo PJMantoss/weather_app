@@ -72,8 +72,12 @@ button.refresh:hover {
     }
 }
 
-@media only screen and (max-width: 499px){
+@media only screen and (max-width: 500px){
     .container {
-        width: 95%;
+        width: 96%;
+    }
+
+    .card {
+        width: 100%;
     }
 }
