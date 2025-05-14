@@ -32,9 +32,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
-        link="https://api.openweathermap.org/data/2.5/weather?q=abuja&appid=0fadf96d2336ead026424b46f3be5560"
-        var request = new XMLHttpRequest();
-        request.open('GET', link, true);
+        // An array of Cities
+        const cities = ['Delhi', 'London', 'Paris', 'Tokyo', 'New York', 'Sydney', 'Cape Town', 'Abuja'];
+
+        function getRandomCity() {
+                const randomIndex = Math.floor(Math.random() * cities.length);
+                return cities[randomIndex];
+            }
+
+        function getWeatherData(city){
+            const apiKey = '0fadf96d2336ead026424b46f3be5560';
+            link=`https://api.openweathermap.org/data/2.5/weather?q=${abuja}&appid=${apiKey}`;
+            var request = new XMLHttpRequest();
+            request.open('GET', link, true);
+        }
 
         request.onload = function(){
             var obj = JSON.parse(this.response);
