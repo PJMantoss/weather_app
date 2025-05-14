@@ -57,6 +57,7 @@
             document.getElementById("location").innerHTML = dataObj.name;
             document.getElementById("temp").innerHTML = Math.round(dataObj.main.temp - 273.15);
             document.getElementById("icon").src = "https://openweathermap.org/img/w/" + dataObj.weather[0].icon + ".png";
+            document.getElementById("humidity").innerHTML = dataObj.main.humidity;
         }
 
         if(request.status >= 200 && request.status < 400){
