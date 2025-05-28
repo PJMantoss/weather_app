@@ -1,51 +1,51 @@
 // Array of Cities
-        const cities = [
-            'Delhi', 
-            'London', 
-            'Paris', 
-            'Tokyo', 
-            'New York', 
-            'Sydney', 
-            'Cape Town', 
-            'Abuja', 
-            'Berlin',
-            'Rome',
-            'Belgrade',
-            'Vienna',
-            'Freetown', 
-            'Addis Ababa', 
-            'Lagos', 
-            'Johannesburg', 
-            'Jerusalem',
-            'Kingston',
-            'Nassau',
-            'Gaborone',
-            'Atlanta',
-            'Moscow', 
-            'Kinshasa', 
-            'Kampala', 
-            'Lisbon',
-            'Nairobi',
-            'Mumbai',
-            'Kigali', 
-            'Cairo',
-            'Toronto', 
-            'Monrovia',
-            'Windhoek'
-        ];
+        // const cities = [
+        //     'Delhi', 
+        //     'London', 
+        //     'Paris', 
+        //     'Tokyo', 
+        //     'New York', 
+        //     'Sydney', 
+        //     'Cape Town', 
+        //     'Abuja', 
+        //     'Berlin',
+        //     'Rome',
+        //     'Belgrade',
+        //     'Vienna',
+        //     'Freetown', 
+        //     'Addis Ababa', 
+        //     'Lagos', 
+        //     'Johannesburg', 
+        //     'Jerusalem',
+        //     'Kingston',
+        //     'Nassau',
+        //     'Gaborone',
+        //     'Atlanta',
+        //     'Moscow', 
+        //     'Kinshasa', 
+        //     'Kampala', 
+        //     'Lisbon',
+        //     'Nairobi',
+        //     'Mumbai',
+        //     'Kigali', 
+        //     'Cairo',
+        //     'Toronto', 
+        //     'Monrovia',
+        //     'Windhoek'
+        // ];
 
-        function getRandomCity() {
-                const randomIndex = Math.floor(Math.random() * cities.length);
-                return cities[randomIndex];
-            }
+        // function getRandomCity() {
+        //         const randomIndex = Math.floor(Math.random() * cities.length);
+        //         return cities[randomIndex];
+        //     }
 
         // Generate a different city name on each reload
-        const city = getRandomCity();
+        // const city = getRandomCity();
 
         var request = new XMLHttpRequest();
 
         const apiKey = '0fadf96d2336ead026424b46f3be5560';
-        link=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+        link=`https://api.openweathermap.org/data/2.5/weather?q=Johannesburg&appid=${apiKey}`;
         request.open('GET', link, true);
 
         request.onload = function(){
